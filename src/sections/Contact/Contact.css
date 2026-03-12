@@ -1,0 +1,91 @@
+﻿.contact {
+  scroll-margin-top: 92px;
+}
+
+.contact__cta {
+  border: 1px solid rgba(59, 130, 246, 0.32);
+  border-radius: 2rem;
+  padding: clamp(3.2rem, 7vw, 5rem) clamp(1.2rem, 5vw, 3.5rem);
+  background: radial-gradient(circle at 8% 75%, rgba(59, 130, 246, 0.12), transparent 42%),
+    radial-gradient(circle at 94% 22%, rgba(59, 130, 246, 0.12), transparent 34%),
+    linear-gradient(180deg, rgba(29, 33, 50, 0.82), rgba(24, 28, 42, 0.84));
+  text-align: center;
+}
+
+.contact__badge {
+  width: fit-content;
+  margin: 0 auto;
+  border-radius: 999px;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  background: rgba(59, 130, 246, 0.13);
+  padding: 0.38rem 0.95rem;
+  color: var(--accent);
+  font-size: 0.94rem;
+  font-family: 'Space Mono', 'Courier New', monospace;
+  line-height: 1;
+}
+
+.contact__cta h2 {
+  font-size: clamp(2rem, 3.15vw, 3.1rem);
+  margin-top: 1.8rem;
+  line-height: 1.2;
+  color: rgba(243, 246, 252, 0.88);
+  font-family: 'Space Mono', 'Courier New', monospace;
+  letter-spacing: 0.005em;
+}
+
+.contact__cta h2 span {
+  color: var(--accent);
+}
+
+.contact__text {
+  max-width: 635px;
+  margin: 1.45rem auto 0;
+  color: rgba(204, 210, 222, 0.8);
+  font-size: clamp(1.04rem, 1.2vw, 1.32rem);
+  line-height: 1.45;
+  font-family: 'Space Mono', 'Courier New', monospace;
+}
+
+.contact__button {
+  margin-top: 2.25rem;
+  display: inline-flex;
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 0.9rem 1.62rem;
+  background: var(--accent);
+  color: #111319;
+  font-size: 1.02rem;
+  font-weight: 700;
+  font-family: 'Space Mono', 'Courier New', monospace;
+  transition: transform 0.2s ease;
+}
+
+.contact__button:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+  .contact__cta {
+    padding: 2.4rem 1.15rem;
+  }
+
+  .contact__cta h2 {
+    margin-top: 1.25rem;
+    font-size: clamp(1.65rem, 5.8vw, 2.2rem);
+  }
+
+  .contact__text {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    max-width: 100%;
+  }
+
+  .contact__button {
+    margin-top: 1.4rem;
+    font-size: 0.92rem;
+    padding: 0.72rem 1.3rem;
+  }
+}
+
+

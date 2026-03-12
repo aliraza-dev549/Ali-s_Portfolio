@@ -1,0 +1,434 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+.hire-page {
+  min-height: 100vh;
+  font-family: 'Space Mono', 'Courier New', monospace;
+}
+
+.hire-page__hero {
+  padding-top: 1.75rem;
+  padding-bottom: 3.2rem;
+}
+
+.hire-page .section__wrap {
+  max-width: 1150px;
+}
+
+.hire-page__title {
+  text-align: center;
+  font-size: clamp(2rem, 2.7vw, 3rem);
+  line-height: 1.14;
+  max-width: 840px;
+  margin: 0 auto 1rem;
+}
+
+.hire-page__title span {
+  display: block;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.hire-page__title strong {
+  display: block;
+  color: var(--text-main);
+  font-weight: 700;
+}
+
+.hire-page__subtitle {
+  text-align: center;
+  color: var(--text-dim);
+  font-size: clamp(0.94rem, 1vw, 1.1rem);
+  line-height: 1.5;
+  max-width: 1020px;
+  margin: 0 auto;
+}
+
+.hire-page__grid {
+  margin-top: 2.2rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.95rem;
+}
+
+.hire-page__formWrap {
+  border: 1px solid rgba(66, 77, 98, 0.42);
+  border-radius: 0.65rem;
+  background: rgba(38, 40, 52, 0.7);
+  padding: 1.55rem 1.45rem;
+}
+
+.hire-page__formInner {
+  border-radius: 0.45rem;
+  background: transparent;
+  padding: 0;
+}
+
+.hire-page__formInner h2 {
+  color: var(--accent);
+  font-size: clamp(1.82rem, 2.4vw, 2.6rem);
+  line-height: 1.18;
+}
+
+.hire-page__formInner p {
+  margin-top: 0.45rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.hire-page__row {
+  margin-top: 1.4rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.88rem;
+}
+
+.hire-page__field {
+  margin-top: 1.08rem;
+}
+
+.hire-page label {
+  display: block;
+  color: var(--text-main);
+  font-size: 0.9rem;
+  margin-bottom: 0.42rem;
+  font-weight: 700;
+}
+
+.hire-page input,
+.hire-page textarea {
+  width: 100%;
+  border: 1px solid rgba(49, 60, 83, 0.62);
+  border-radius: 0.45rem;
+  background: #1b1f2e;
+  color: var(--text-main);
+  font-family: inherit;
+  padding: 0.76rem 0.85rem;
+  outline: none;
+  font-size: 0.95rem;
+}
+
+body[data-theme='light'] .hire-page input,
+body[data-theme='light'] .hire-page textarea {
+  background: #f2f5fb;
+}
+
+.hire-page textarea {
+  resize: vertical;
+  min-height: 146px;
+}
+
+.hire-page__actions {
+  margin-top: 1.22rem;
+  display: flex;
+  gap: 0.95rem;
+}
+
+.hire-page__btn {
+  border: none;
+  border-radius: 999px;
+  padding: 0.56rem 1.45rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.hire-page__btn--send,
+.hire-page__btn--reset {
+  background: var(--accent);
+  color: #111319;
+}
+
+.hire-page__side h3 {
+  color: var(--text-main);
+  font-size: clamp(2.2rem, 2.8vw, 3rem);
+  margin-bottom: 1.18rem;
+  line-height: 1.2;
+}
+
+.hire-page__side h3 span {
+  color: var(--accent);
+}
+
+.hire-page__whyList {
+  display: grid;
+  gap: 1.12rem;
+}
+
+.hire-page__whyCard {
+  border: 1px solid rgba(73, 91, 131, 0.58);
+  border-radius: 0.95rem;
+  background: rgba(36, 41, 58, 0.48);
+  padding: 1.15rem 1.25rem;
+  box-shadow: none;
+}
+
+.hire-page__whyHead {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 0.58rem;
+}
+
+.hire-page__whyIcon {
+  color: var(--text-dim);
+  font-size: 1.1rem;
+}
+
+.hire-page__whyHead h4 {
+  color: var(--text-main);
+  font-size: 0.94rem;
+  line-height: 1.2;
+}
+
+.hire-page__whyBadge {
+  border: none;
+  border-radius: 999px;
+  color: #111319;
+  background: linear-gradient(135deg, #3b82f6, #3b82f6);
+  font-size: 0.76rem;
+  font-weight: 700;
+  padding: 0.38rem 0.9rem;
+  white-space: nowrap;
+}
+
+.hire-page__whyCard p {
+  margin-top: 0.5rem;
+  color: var(--text-muted);
+  font-size: 0.81rem;
+  line-height: 1.5;
+}
+
+.hire-page__benefits {
+  margin-top: 2.5rem;
+  border: 1px solid rgba(82, 93, 113, 0.5);
+  border-radius: 1rem;
+  background: rgba(39, 42, 55, 0.68);
+  padding: 1.9rem 1.55rem 2.05rem;
+  margin-bottom: 6.2rem;
+}
+
+.hire-page__benefits h3 {
+  text-align: center;
+  color: var(--text-main);
+  font-size: clamp(1.88rem, 2.35vw, 2.6rem);
+  font-weight: 700;
+  margin-bottom: 1.7rem;
+}
+
+.hire-page__benefitGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.1rem;
+}
+
+.hire-page__benefitCard {
+  border: 1px solid rgba(78, 98, 132, 0.58);
+  border-radius: 0.95rem;
+  background: #171b2a;
+  padding: 1.35rem 1rem 1.3rem;
+  min-height: 238px;
+  text-align: center;
+  box-shadow: none;
+}
+
+.hire-page__benefitNumber {
+  width: 2.85rem;
+  height: 2.85rem;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #3b82f6, #3b82f6);
+  color: #111319;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.hire-page__benefitCard h4 {
+  margin-top: 0.75rem;
+  color: var(--accent);
+  font-size: 1.05rem;
+  line-height: 1.25;
+}
+
+.hire-page__benefitCard p {
+  margin-top: 0.5rem;
+  color: var(--text-muted);
+  font-size: 0.84rem;
+  line-height: 1.5;
+  max-width: 170px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 1200px) {
+  .hire-page__hero {
+    padding-top: 1.55rem;
+    padding-bottom: 2.7rem;
+  }
+
+  .hire-page__grid {
+    gap: 1.1rem;
+  }
+
+  .hire-page__formWrap {
+    padding: 1.1rem;
+  }
+
+  .hire-page__formInner {
+    padding: 0;
+  }
+
+  .hire-page__formInner h2 {
+    font-size: clamp(1.5rem, 2.15vw, 2rem);
+  }
+
+  .hire-page__formInner p,
+  .hire-page label,
+  .hire-page input,
+  .hire-page textarea,
+  .hire-page__btn {
+    font-size: 0.9rem;
+  }
+
+  .hire-page textarea {
+    min-height: 132px;
+  }
+
+  .hire-page__side h3 {
+    font-size: clamp(1.8rem, 2.35vw, 2.25rem);
+    margin-bottom: 0.75rem;
+  }
+
+  .hire-page__whyHead h4 {
+    font-size: 0.88rem;
+  }
+
+  .hire-page__benefitCard h4 {
+    font-size: 0.98rem;
+  }
+
+  .hire-page__whyCard p,
+  .hire-page__benefitCard p {
+    font-size: 0.8rem;
+  }
+
+  .hire-page__benefitNumber {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1rem;
+  }
+
+  .hire-page__benefits h3 {
+    font-size: clamp(1.65rem, 2.1vw, 2.2rem);
+  }
+
+  .hire-page__benefits {
+    margin-bottom: 4rem;
+  }
+}
+
+@media (max-width: 980px) {
+  .hire-page__hero {
+    padding-top: 1.4rem;
+    padding-bottom: 2.4rem;
+  }
+
+  .hire-page__subtitle {
+    max-width: 760px;
+  }
+
+  .hire-page__grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .hire-page__benefits {
+    margin-top: 1.5rem;
+    margin-bottom: 2.4rem;
+  }
+
+  .hire-page__benefitGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hire-page__whyHead h4 {
+    font-size: 0.95rem;
+  }
+
+  .hire-page__benefitCard h4 {
+    font-size: 1rem;
+  }
+
+  .hire-page__whyCard p,
+  .hire-page__benefitCard p {
+    font-size: 0.84rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .hire-page__title {
+    font-size: clamp(1.95rem, 8vw, 2.7rem);
+    margin-bottom: 0.5rem;
+  }
+
+  .hire-page__subtitle {
+    font-size: 0.88rem;
+  }
+
+  .hire-page__grid {
+    margin-top: 1.2rem;
+  }
+
+  .hire-page__formWrap {
+    padding: 0.7rem;
+  }
+
+  .hire-page__formInner {
+    padding: 0;
+  }
+
+  .hire-page__formInner h2 {
+    font-size: 1.48rem;
+  }
+
+  .hire-page__formInner p,
+  .hire-page label,
+  .hire-page input,
+  .hire-page textarea,
+  .hire-page__btn,
+  .hire-page__whyBadge,
+  .hire-page__whyCard p,
+  .hire-page__benefitCard p {
+    font-size: 0.84rem;
+  }
+
+  .hire-page__whyHead h4,
+  .hire-page__benefitCard h4 {
+    font-size: 0.95rem;
+  }
+
+  .hire-page__whyIcon {
+    font-size: 0.92rem;
+  }
+
+  .hire-page__benefits h3 {
+    font-size: clamp(1.36rem, 5vw, 1.9rem);
+  }
+
+  .hire-page__benefitNumber {
+    width: 2.2rem;
+    height: 2.2rem;
+    font-size: 1rem;
+  }
+
+  .hire-page__row {
+    grid-template-columns: 1fr;
+  }
+
+  .hire-page__benefitGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
