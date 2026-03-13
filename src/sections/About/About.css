@@ -209,15 +209,41 @@
 }
 
 @media (max-width: 640px) {
+  .about {
+    padding-top: 4.2rem;
+  }
+
   .about__detailsGrid {
     grid-template-columns: 1fr;
   }
 
   .about__title {
+    font-size: clamp(1.6rem, 8vw, 2.2rem);
     margin-bottom: 0.7rem;
+  }
+
+  .about__subtitle {
+    font-size: 0.92rem;
+    line-height: 1.5;
   }
 
   .about__topGrid {
     margin-top: 2rem;
+  }
+
+  .about__intro h3,
+  .about__focus h3 {
+    font-size: 1.2rem;
+  }
+
+  .about__intro p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .about__button {
+    min-height: 44px;
+    font-size: 0.9rem;
+    padding: 0.62rem 1rem;
   }
 }

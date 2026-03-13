@@ -194,6 +194,14 @@ body[data-theme='light'] .projects__arrow {
 }
 
 @media (max-width: 680px) {
+  .projects__title {
+    font-size: clamp(1.65rem, 8vw, 2.2rem);
+  }
+
+  .projects__subtitle {
+    font-size: 0.9rem;
+  }
+
   .projects__tabs {
     justify-content: flex-start;
   }
@@ -202,6 +210,24 @@ body[data-theme='light'] .projects__arrow {
     min-width: 138px;
     height: 44px;
     font-size: 0.86rem;
+  }
+
+  .projects__content {
+    padding: 0.82rem;
+  }
+
+  .projects__content h3 {
+    font-size: 1rem;
+  }
+
+  .projects__content p {
+    font-size: 0.84rem;
+    min-height: 0;
+  }
+
+  .projects__tags span {
+    font-size: 0.68rem;
+    padding: 0.2rem 0.5rem;
   }
 }
 

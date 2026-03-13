@@ -318,6 +318,28 @@ body[data-theme='light'] .contact-page__benefitCard {
     padding-bottom: 2.1rem;
   }
 
+  .contact-page__title {
+    font-size: clamp(1.7rem, 8.5vw, 2.3rem);
+    margin-bottom: 0.45rem;
+  }
+
+  .contact-page__subtitle {
+    font-size: 0.9rem;
+    line-height: 1.45;
+  }
+
+  .contact-page__socialHead h3 {
+    font-size: clamp(1.4rem, 7vw, 1.9rem);
+  }
+
+  .contact-page__socialBlock h4 {
+    font-size: 1.4rem;
+  }
+
+  .contact-page__socialBlock > p {
+    font-size: 0.86rem;
+  }
+
   .contact-page__socialWrap,
   .contact-page__socialBlock,
   .contact-page__infoCard,
@@ -337,15 +359,32 @@ body[data-theme='light'] .contact-page__benefitCard {
   }
 
   .contact-page__socialItem h5 {
-    font-size: 1.2rem;
+    font-size: 1.05rem;
   }
 
   .contact-page__socialItem small {
+    font-size: 0.82rem;
+  }
+
+  .contact-page__profileTop h4 {
+    font-size: 1.18rem;
+  }
+
+  .contact-page__smallCard h5 {
+    font-size: 1.05rem;
+  }
+
+  .contact-page__smallCard a {
     font-size: 0.9rem;
   }
 
   .contact-page__benefits {
     padding: 0.95rem;
+  }
+
+  .contact-page__benefitsTitle {
+    font-size: clamp(1.35rem, 6vw, 1.8rem);
+    margin-bottom: 0.8rem;
   }
 
   .contact-page__benefitsGrid {
@@ -358,7 +397,11 @@ body[data-theme='light'] .contact-page__benefitCard {
   }
 
   .contact-page__benefitCard h4 {
-    font-size: 1.4rem;
+    font-size: 1.05rem;
+  }
+
+  .contact-page__benefitCard p {
+    font-size: 0.86rem;
   }
 }
 

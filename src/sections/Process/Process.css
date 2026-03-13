@@ -63,6 +63,29 @@
 
 @media (max-width: 640px) {
   .process__grid {
+    margin-top: 1.4rem;
+  }
+
+  .process__grid {
     grid-template-columns: 1fr;
+  }
+
+  .process__card {
+    min-height: 0;
+    padding: 1rem;
+  }
+
+  .process__number {
+    font-size: 1.9rem;
+  }
+
+  .process__card h3 {
+    font-size: 1.15rem;
+    margin-top: 2.4rem;
+  }
+
+  .process__card p {
+    font-size: 0.9rem;
+    line-height: 1.5;
   }
 }
