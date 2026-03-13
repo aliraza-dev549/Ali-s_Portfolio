@@ -29,7 +29,7 @@ const processSteps = [
 
 function Process() {
   return (
-    <section id="process" className="process fade-in">
+    <section id="process" className="process">
       <div className="section__wrap">
         <p className="section__tag process__tag">PROCESS</p>
         <h2 className="section__title process__title">How I Work</h2>
@@ -38,12 +38,8 @@ function Process() {
         </p>
 
         <div className="process__grid">
-          {processSteps.map((step, index) => (
-            <article
-              key={step.number}
-              className="process__card fade-in-item hover-zoom"
-              style={{ '--reveal-delay': `${index * 90}ms` }}
-            >
+          {processSteps.map((step) => (
+            <article key={step.number} className="process__card">
               <span className="process__number">{step.number}</span>
               <h3>{step.title}</h3>
               <p>{step.description}</p>

@@ -46,7 +46,7 @@ const workBenefits = [
 
 function Hire() {
   return (
-    <section id="hire" className="hire-page fade-in">
+    <section id="hire" className="hire-page">
       <div className="hire-page__hero">
         <div className="section__wrap">
           <p className="hire-page__subtitle">

@@ -63,7 +63,7 @@ function Hero() {
   }, [activeRoleIndex, typedRole, isDeleting])
 
   return (
-    <section id="home" className="hero fade-in">
+    <section id="home" className="hero">
       <div className="section__wrap hero__grid">
         <div className="hero__content">
           <p className="hero__status">● Available for Freelance & Full-time</p>

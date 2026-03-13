@@ -58,7 +58,7 @@ function ServicesPage({ currentPath, onNavigate, isLightMode, onToggleTheme }) {
     <>
       <Header currentPath={currentPath} onNavigate={onNavigate} isLightMode={isLightMode} onToggleTheme={onToggleTheme} />
 
-      <main className="services-page fade-in" id="services-page">
+      <main className="services-page" id="services-page">
         <section className="services-page__hero">
           <div className="section__wrap">
             <h1 className="services-page__title">Solutions I Provide</h1>
@@ -67,12 +67,8 @@ function ServicesPage({ currentPath, onNavigate, isLightMode, onToggleTheme }) {
             </p>
 
             <div className="services-page__grid">
-              {serviceCards.map((service, index) => (
-                <article
-                  className="services-page__card fade-in-item hover-zoom"
-                  key={service.number}
-                  style={{ '--reveal-delay': `${index * 85}ms` }}
-                >
+              {serviceCards.map((service) => (
+                <article className="services-page__card" key={service.number}>
                   <div className="services-page__cardTop">
                     <span className="services-page__number">{service.number}</span>
                     <span className={`services-page__icon ${service.iconClass}`}>{service.icon}</span>

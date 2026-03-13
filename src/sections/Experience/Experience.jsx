@@ -120,7 +120,7 @@ function Experience() {
   }
 
   return (
-    <section id="experience" className="experience fade-in">
+    <section id="experience" className="experience">
       <div className="section__wrap">
         <h2 className="experience__title">
           {activeTabMeta.heading} <span className="experience__titleIcon" aria-hidden="true">{activeTabMeta.icon}</span>
@@ -152,12 +152,8 @@ function Experience() {
           </div>
 
           <div className="experience__grid">
-            {activeItems.map((item, index) => (
-              <article
-                className="experience__card fade-in-item hover-zoom"
-                key={`${item.organization}-${item.period}-${item.title}`}
-                style={{ '--reveal-delay': `${index * 85}ms` }}
-              >
+            {activeItems.map((item) => (
+              <article className="experience__card" key={`${item.organization}-${item.period}-${item.title}`}>
                 <div className="experience__meta">
                   <span className="experience__periodPill">{item.period}</span>
                 </div>

@@ -8,7 +8,7 @@ function ContactPage({ currentPath, onNavigate, isLightMode, onToggleTheme }) {
     <>
       <Header currentPath={currentPath} onNavigate={onNavigate} isLightMode={isLightMode} onToggleTheme={onToggleTheme} />
 
-      <main className="contact-page fade-in" id="contact-page">
+      <main className="contact-page" id="contact-page">
         <section className="contact-page__hero">
           <div className="section__wrap">
             <h1 className="contact-page__title">Let&apos;s Connect</h1>
@@ -18,7 +18,7 @@ function ContactPage({ currentPath, onNavigate, isLightMode, onToggleTheme }) {
             </p>
 
             <div className="contact-page__grid">
-              <article className="contact-page__formWrap fade-in-item hover-zoom" style={{ '--reveal-delay': '70ms' }}>
+              <article className="contact-page__formWrap">
                 <div className="contact-page__formInner">
                   <h2>Let&apos;s Work Together</h2>
                   <p>Let&apos;s create something amazing together!</p>
@@ -63,10 +63,10 @@ function ContactPage({ currentPath, onNavigate, isLightMode, onToggleTheme }) {
                 </div>
               </article>
 
-              <aside className="contact-page__side fade-in-item" style={{ '--reveal-delay': '150ms' }}>
+              <aside className="contact-page__side">
                 <h3>Contact Information</h3>
 
-                <article className="contact-page__infoCard fade-in-item hover-zoom" style={{ '--reveal-delay': '220ms' }}>
+                <article className="contact-page__infoCard">
                   <div className="contact-page__profileTop">
                     <img src={profileImage} alt="Ali Raza" />
                     <div>
@@ -93,12 +93,12 @@ function ContactPage({ currentPath, onNavigate, isLightMode, onToggleTheme }) {
                   </p>
                 </article>
 
-                <article className="contact-page__smallCard fade-in-item hover-zoom" style={{ '--reveal-delay': '290ms' }}>
+                <article className="contact-page__smallCard">
                   <h5>Phone</h5>
                   <a href="tel:+923096894742">+92-3096894742</a>
                 </article>
 
-                <article className="contact-page__smallCard fade-in-item hover-zoom" style={{ '--reveal-delay': '360ms' }}>
+                <article className="contact-page__smallCard">
                   <h5>Email</h5>
                   <a href="mailto:aliraza.dev549@gmail.com">aliraza.dev549@gmail.com</a>
                 </article>

@@ -167,28 +167,20 @@
 
 @media (hover: hover) and (pointer: fine) {
   .about__photoWrap:hover {
-    transform: scale(1.02);
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2);
   }
 
   .about__detailCard:hover {
-    transform: scale(1.02);
     border-color: var(--border-mid);
     box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
   }
 
-  .about__intro:hover,
-  .about__focus:hover {
-    transform: scale(1.015);
-  }
-
   .about__chip:hover {
-    transform: scale(1.04);
     border-color: var(--accent);
   }
 
   .about__button:hover {
-    transform: scale(1.03) translateY(-2px);
+    transform: translateY(-2px);
   }
 }
 

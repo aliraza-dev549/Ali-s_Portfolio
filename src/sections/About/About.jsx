@@ -33,7 +33,7 @@ function About() {
   }
 
   return (
-    <section id="about" className="about fade-in">
+    <section id="about" className="about">
       <div className="section__wrap about__wrap">
         <header className="about__header">
           <h2 className="about__title">About Me</h2>
@@ -44,17 +44,13 @@ function About() {
         </header>
 
         <div className="about__topGrid">
-          <div className="about__photoWrap fade-in-item hover-zoom" style={{ '--reveal-delay': '80ms' }}>
+          <div className="about__photoWrap">
             <img src={profileImage} alt="Ali Raza portrait" className="about__photo" />
           </div>
 
           <div className="about__detailsGrid">
-            {details.map((item, index) => (
-              <article
-                className="about__detailCard fade-in-item hover-zoom"
-                key={item.label}
-                style={{ '--reveal-delay': `${index * 70}ms` }}
-              >
+            {details.map((item) => (
+              <article className="about__detailCard" key={item.label}>
                 <span className="about__detailIcon" aria-hidden="true">
                   {item.icon}
                 </span>

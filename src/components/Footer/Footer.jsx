@@ -31,7 +31,7 @@ function Footer() {
   }
 
   return (
-    <footer className="footer fade-in">
+    <footer className="footer">
       <div className="footer__container">
         <section className="footer__brand">
           <p className="footer__eyebrow">Ali Raza • Full Stack Developer</p>
