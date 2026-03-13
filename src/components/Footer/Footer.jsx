@@ -124,7 +124,6 @@ function Footer() {
 
       <div className="footer__bottom">
         <p>Copyright © {year} Ali Raza. All rights reserved.</p>
-        <p className="footer__builtWith">Crafted with React and Vite</p>
       </div>
     </footer>
   )
