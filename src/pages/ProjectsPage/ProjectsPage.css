@@ -76,6 +76,7 @@
   border-radius: 0.42rem;
   overflow: hidden;
   background: var(--panel);
+  transition: transform 0.22s ease;
 }
 
 .projects-page__image {
@@ -137,6 +138,12 @@
   text-decoration: none;
   font-size: 0.68rem;
   font-weight: 700;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .projects-page__card:hover {
+    transform: scale(1.03);
+  }
 }
 
 @media (max-width: 1000px) {

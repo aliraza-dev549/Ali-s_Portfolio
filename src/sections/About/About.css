@@ -171,6 +171,7 @@
   }
 
   .about__detailCard:hover {
+    transform: scale(1.03);
     border-color: var(--border-mid);
     box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
   }

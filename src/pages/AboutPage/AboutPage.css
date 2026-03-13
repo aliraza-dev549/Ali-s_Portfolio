@@ -119,6 +119,7 @@
     radial-gradient(circle at 78% 40%, rgba(59, 130, 246, 0.12), transparent 64%),
     rgba(17, 22, 34, 0.85);
   box-shadow: inset 0 0 0 1px rgba(30, 42, 49, 0.3);
+  transition: transform 0.22s ease;
 }
 
 .about-page__year {
@@ -186,6 +187,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: transform 0.22s ease;
 }
 
 .about-page__skillIcon {
@@ -215,6 +217,13 @@
 .about-page__profileItem span {
   color: #3b82f6;
   font-weight: 700;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .about-page__card:hover,
+  .about-page__skillCard:hover {
+    transform: scale(1.03);
+  }
 }
 
 @media (max-width: 1200px) {

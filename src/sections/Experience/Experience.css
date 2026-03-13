@@ -127,6 +127,7 @@
     linear-gradient(180deg, rgba(20, 28, 41, 0.92), rgba(20, 26, 39, 0.88));
   padding: 1.15rem 1.2rem;
   min-height: 150px;
+  transition: transform 0.22s ease;
 }
 
 .experience__meta {
@@ -254,6 +255,12 @@
 .experience__actions a:last-child {
   color: #e5e9f3;
   background: rgba(255, 255, 255, 0.05);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .experience__card:hover {
+    transform: scale(1.03);
+  }
 }
 
 body[data-theme='light'] .experience__tab--active {

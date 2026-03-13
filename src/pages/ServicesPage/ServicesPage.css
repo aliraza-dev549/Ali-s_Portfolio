@@ -35,6 +35,7 @@
   min-height: 280px;
   display: flex;
   flex-direction: column;
+  transition: transform 0.22s ease;
 }
 
 body[data-theme='light'] .services-page__card {
@@ -118,6 +119,12 @@ body[data-theme='light'] .services-page__card {
 
 .services-page__card a span {
   color: var(--accent);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .services-page__card:hover {
+    transform: scale(1.03);
+  }
 }
 
 @media (max-width: 980px) {
