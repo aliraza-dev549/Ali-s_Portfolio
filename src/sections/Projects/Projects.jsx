@@ -454,7 +454,7 @@ function ProjectCard({ project }) {
 }
 
 function Projects() {
-  const [activeTab, setActiveTab] = useState('all')
+  const [activeTab, setActiveTab] = useState('web')
 
   const activeProjects = useMemo(() => projectsByCategory[activeTab], [activeTab])
 
