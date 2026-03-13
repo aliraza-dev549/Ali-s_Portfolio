@@ -308,6 +308,10 @@ body[data-theme='light'] .skills__contact {
   border-color: var(--border-soft);
 }
 
+body[data-theme='light'] .skills__contact {
+  background: linear-gradient(180deg, rgba(59, 130, 246, 0.08), rgba(245, 248, 255, 0.98));
+}
+
 body[data-theme='light'] .skills__metrics article,
 body[data-theme='light'] .skills__card {
   background: linear-gradient(180deg, #ffffff, rgba(246, 249, 255, 0.98));

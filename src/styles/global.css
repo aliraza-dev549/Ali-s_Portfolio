@@ -1,4 +1,4 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
 * {
   box-sizing: border-box;
@@ -61,12 +61,28 @@ html {
 }
 
 body {
-  font-family: 'Space Grotesk', Segoe UI, Arial, sans-serif;
+  font-family: 'Inter', Segoe UI, Arial, sans-serif;
   background: var(--bg-main);
   color: var(--text-main);
   font-size: 15px;
   line-height: 1.5;
   overflow-x: hidden;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.hero__title,
+.about-page__title,
+.projects-page__title,
+.services-page__title,
+.contact-page__title,
+.hire-page__title {
+  font-family: 'Space Grotesk', Segoe UI, Arial, sans-serif;
 }
 
 a {

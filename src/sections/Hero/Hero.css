@@ -131,6 +131,11 @@
   transition: transform 0.25s ease;
 }
 
+.hero__socials a svg {
+  width: 16px;
+  height: 16px;
+}
+
 .hero__socials a:hover {
   color: var(--accent);
   transform: translateY(-2px);

@@ -97,6 +97,11 @@
   justify-content: center;
 }
 
+.projects__arrow svg {
+  width: 17px;
+  height: 17px;
+}
+
 .projects__arrow--left {
   left: 0.45rem;
 }
