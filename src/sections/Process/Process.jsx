@@ -38,8 +38,12 @@ function Process() {
         </p>
 
         <div className="process__grid">
-          {processSteps.map((step) => (
-            <article key={step.number} className="process__card">
+          {processSteps.map((step, index) => (
+            <article
+              key={step.number}
+              className="process__card fade-in-item hover-zoom"
+              style={{ '--reveal-delay': `${index * 90}ms` }}
+            >
               <span className="process__number">{step.number}</span>
               <h3>{step.title}</h3>
               <p>{step.description}</p>

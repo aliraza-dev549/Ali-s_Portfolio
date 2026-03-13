@@ -13,7 +13,7 @@ function Contact() {
         </p>
 
         <div className="contact-page__grid">
-          <article className="contact-page__socialWrap">
+          <article className="contact-page__socialWrap fade-in-item hover-zoom" style={{ '--reveal-delay': '70ms' }}>
             <div className="contact-page__socialHead">
               <h3>Connect With Me</h3>
               <p>
@@ -59,10 +59,10 @@ function Contact() {
             </div>
           </article>
 
-          <aside className="contact-page__side">
+          <aside className="contact-page__side fade-in-item" style={{ '--reveal-delay': '140ms' }}>
             <h3>Contact Information</h3>
 
-            <article className="contact-page__infoCard">
+            <article className="contact-page__infoCard fade-in-item hover-zoom" style={{ '--reveal-delay': '210ms' }}>
               <div className="contact-page__profileTop">
                 <img src={profileImage} alt="Ali Raza" />
                 <div>
@@ -94,12 +94,12 @@ function Contact() {
               </p>
             </article>
 
-            <article className="contact-page__smallCard">
+            <article className="contact-page__smallCard fade-in-item hover-zoom" style={{ '--reveal-delay': '280ms' }}>
               <h5>Phone</h5>
               <a href="tel:+923096894742">+92-3096894742</a>
             </article>
 
-            <article className="contact-page__smallCard">
+            <article className="contact-page__smallCard fade-in-item hover-zoom" style={{ '--reveal-delay': '350ms' }}>
               <h5>Email</h5>
               <a href="mailto:aliraza.dev549@gmail.com">aliraza.dev549@gmail.com</a>
             </article>
@@ -110,25 +110,25 @@ function Contact() {
           <h3 className="contact-page__benefitsTitle">What You Get When You Work With Me</h3>
 
           <div className="contact-page__benefitsGrid">
-            <article className="contact-page__benefitCard">
+            <article className="contact-page__benefitCard fade-in-item hover-zoom" style={{ '--reveal-delay': '80ms' }}>
               <span className="contact-page__benefitNumber">1</span>
               <h4>Quick Turnaround</h4>
               <p>Fast delivery without compromising quality</p>
             </article>
 
-            <article className="contact-page__benefitCard">
+            <article className="contact-page__benefitCard fade-in-item hover-zoom" style={{ '--reveal-delay': '160ms' }}>
               <span className="contact-page__benefitNumber">2</span>
               <h4>24/7 Support</h4>
               <p>Available for urgent fixes and consultations</p>
             </article>
 
-            <article className="contact-page__benefitCard">
+            <article className="contact-page__benefitCard fade-in-item hover-zoom" style={{ '--reveal-delay': '240ms' }}>
               <span className="contact-page__benefitNumber">3</span>
               <h4>Modern Tech Stack</h4>
               <p>Using latest technologies for future-proof solutions</p>
             </article>
 
-            <article className="contact-page__benefitCard">
+            <article className="contact-page__benefitCard fade-in-item hover-zoom" style={{ '--reveal-delay': '320ms' }}>
               <span className="contact-page__benefitNumber">4</span>
               <h4>SEO Optimized</h4>
               <p>Built with search engine optimization in mind</p>

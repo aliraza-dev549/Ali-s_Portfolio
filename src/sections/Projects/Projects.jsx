@@ -386,7 +386,7 @@ const projectsByCategory = {
   ],
 }
 
-function ProjectCard({ project }) {
+function ProjectCard({ project, index }) {
   const [activeImageIndex, setActiveImageIndex] = useState(0)
 
   useEffect(() => {
@@ -408,8 +408,11 @@ function ProjectCard({ project }) {
   }
 
   return (
-    <article className="projects__card">
-      <div className="projects__media">
+    <article
+      className="projects__card fade-in-item hover-zoom"
+      style={{ '--reveal-delay': `${index * 85}ms` }}
+    >
+      <div className="projects__media hover-zoom">
         <img
           src={project.images[activeImageIndex]}
           alt={`${project.title} preview ${activeImageIndex + 1}`}
@@ -483,8 +486,8 @@ function Projects() {
         </div>
 
         <div className="projects__grid" key={activeTab}>
-          {activeProjects.map((project) => (
-            <ProjectCard key={project.title} project={project} />
+          {activeProjects.map((project, index) => (
+            <ProjectCard key={project.title} project={project} index={index} />
           ))}
         </div>
       </div>

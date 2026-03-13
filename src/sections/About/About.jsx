@@ -44,13 +44,17 @@ function About() {
         </header>
 
         <div className="about__topGrid">
-          <div className="about__photoWrap">
+          <div className="about__photoWrap fade-in-item hover-zoom" style={{ '--reveal-delay': '80ms' }}>
             <img src={profileImage} alt="Ali Raza portrait" className="about__photo" />
           </div>
 
           <div className="about__detailsGrid">
-            {details.map((item) => (
-              <article className="about__detailCard" key={item.label}>
+            {details.map((item, index) => (
+              <article
+                className="about__detailCard fade-in-item hover-zoom"
+                key={item.label}
+                style={{ '--reveal-delay': `${index * 70}ms` }}
+              >
                 <span className="about__detailIcon" aria-hidden="true">
                   {item.icon}
                 </span>

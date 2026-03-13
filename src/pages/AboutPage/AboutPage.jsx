@@ -173,8 +173,12 @@ function AboutPage({ currentPath, onNavigate, isLightMode, onToggleTheme }) {
                 </p>
 
                 <div className="about-page__cards">
-                  {educationData.map((item) => (
-                    <article className="about-page__card" key={`${item.year}-${item.title}`}>
+                  {educationData.map((item, index) => (
+                    <article
+                      className="about-page__card fade-in-item hover-zoom"
+                      key={`${item.year}-${item.title}`}
+                      style={{ '--reveal-delay': `${index * 90}ms` }}
+                    >
                       <span className="about-page__year">{item.year}</span>
                       <h3>{item.title}</h3>
                       <p className="about-page__company">{item.place}</p>
@@ -195,8 +199,12 @@ function AboutPage({ currentPath, onNavigate, isLightMode, onToggleTheme }) {
                 </p>
 
                 <div className="about-page__cards">
-                  {experienceData.map((item) => (
-                    <article className="about-page__card" key={`${item.year}-${item.title}`}>
+                  {experienceData.map((item, index) => (
+                    <article
+                      className="about-page__card fade-in-item hover-zoom"
+                      key={`${item.year}-${item.title}`}
+                      style={{ '--reveal-delay': `${index * 90}ms` }}
+                    >
                       <span className="about-page__year">{item.year}</span>
                       <h3>{item.title}</h3>
                       <p className="about-page__company">{item.place}</p>
@@ -219,8 +227,13 @@ function AboutPage({ currentPath, onNavigate, isLightMode, onToggleTheme }) {
                 </p>
 
                 <div className="about-page__skillGrid">
-                  {skillsData.map((item) => (
-                    <article className="about-page__skillCard" key={item.label} aria-label={item.label}>
+                  {skillsData.map((item, index) => (
+                    <article
+                      className="about-page__skillCard fade-in-item hover-zoom"
+                      key={item.label}
+                      aria-label={item.label}
+                      style={{ '--reveal-delay': `${index * 45}ms` }}
+                    >
                       <span className="about-page__skillIcon">{item.icon}</span>
                     </article>
                   ))}
@@ -238,8 +251,12 @@ function AboutPage({ currentPath, onNavigate, isLightMode, onToggleTheme }) {
                 </p>
 
                 <div className="about-page__profileGrid">
-                  {profileData.map((item) => (
-                    <p className="about-page__profileItem" key={item.label}>
+                  {profileData.map((item, index) => (
+                    <p
+                      className="about-page__profileItem fade-in-item"
+                      key={item.label}
+                      style={{ '--reveal-delay': `${index * 55}ms` }}
+                    >
                       <span>{item.label}:</span> {item.value}
                     </p>
                   ))}

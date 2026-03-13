@@ -152,8 +152,12 @@ function Experience() {
           </div>
 
           <div className="experience__grid">
-            {activeItems.map((item) => (
-              <article className="experience__card" key={`${item.organization}-${item.period}-${item.title}`}>
+            {activeItems.map((item, index) => (
+              <article
+                className="experience__card fade-in-item hover-zoom"
+                key={`${item.organization}-${item.period}-${item.title}`}
+                style={{ '--reveal-delay': `${index * 85}ms` }}
+              >
                 <div className="experience__meta">
                   <span className="experience__periodPill">{item.period}</span>
                 </div>

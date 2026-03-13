@@ -23,6 +23,76 @@ function App() {
     }
   }, [])
 
+  useEffect(() => {
+    const revealSelector = '.fade-in, .fade-in-item'
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
+    if (prefersReducedMotion) {
+      document.querySelectorAll(revealSelector).forEach((element) => {
+        element.classList.add('is-visible')
+      })
+      return
+    }
+
+    const observedElements = new WeakSet()
+    const revealObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) {
+            return
+          }
+
+          entry.target.classList.add('is-visible')
+          observer.unobserve(entry.target)
+        })
+      },
+      {
+        threshold: 0.16,
+        rootMargin: '0px 0px -8% 0px',
+      },
+    )
+
+    const observeNode = (node) => {
+      if (!(node instanceof HTMLElement) || observedElements.has(node)) {
+        return
+      }
+
+      observedElements.add(node)
+      revealObserver.observe(node)
+    }
+
+    const scanForRevealNodes = (root = document) => {
+      if (root instanceof HTMLElement && root.matches(revealSelector)) {
+        observeNode(root)
+      }
+
+      if (typeof root.querySelectorAll === 'function') {
+        root.querySelectorAll(revealSelector).forEach((node) => {
+          observeNode(node)
+        })
+      }
+    }
+
+    scanForRevealNodes()
+
+    const mutationObserver = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        mutation.addedNodes.forEach((node) => {
+          if (node instanceof HTMLElement) {
+            scanForRevealNodes(node)
+          }
+        })
+      })
+    })
+
+    mutationObserver.observe(document.body, { childList: true, subtree: true })
+
+    return () => {
+      revealObserver.disconnect()
+      mutationObserver.disconnect()
+    }
+  }, [])
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }

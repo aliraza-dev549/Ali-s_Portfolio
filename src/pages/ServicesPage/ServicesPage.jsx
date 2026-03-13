@@ -67,8 +67,12 @@ function ServicesPage({ currentPath, onNavigate, isLightMode, onToggleTheme }) {
             </p>
 
             <div className="services-page__grid">
-              {serviceCards.map((service) => (
-                <article className="services-page__card" key={service.number}>
+              {serviceCards.map((service, index) => (
+                <article
+                  className="services-page__card fade-in-item hover-zoom"
+                  key={service.number}
+                  style={{ '--reveal-delay': `${index * 85}ms` }}
+                >
                   <div className="services-page__cardTop">
                     <span className="services-page__number">{service.number}</span>
                     <span className={`services-page__icon ${service.iconClass}`}>{service.icon}</span>

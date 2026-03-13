@@ -64,7 +64,7 @@ function HireMePage({ currentPath, onNavigate, isLightMode, onToggleTheme }) {
             </p>
 
             <div className="hire-page__grid">
-              <article className="hire-page__formWrap">
+              <article className="hire-page__formWrap fade-in-item hover-zoom" style={{ '--reveal-delay': '70ms' }}>
                 <div className="hire-page__formInner">
                   <h2>Start Your Project</h2>
                   <p>bring your ideas to life? Let&apos;s discuss your project requirements.</p>
@@ -109,14 +109,18 @@ function HireMePage({ currentPath, onNavigate, isLightMode, onToggleTheme }) {
                 </div>
               </article>
 
-              <aside className="hire-page__side">
+              <aside className="hire-page__side fade-in-item" style={{ '--reveal-delay': '150ms' }}>
                 <h3>
                   Why Choose <span>Me?</span>
                 </h3>
 
                 <div className="hire-page__whyList">
-                  {whyChooseItems.map((item) => (
-                    <article className="hire-page__whyCard" key={item.title}>
+                  {whyChooseItems.map((item, index) => (
+                    <article
+                      className="hire-page__whyCard fade-in-item hover-zoom"
+                      key={item.title}
+                      style={{ '--reveal-delay': `${index * 90}ms` }}
+                    >
                       <div className="hire-page__whyHead">
                         <span className="hire-page__whyIcon">{item.icon}</span>
                         <h4>{item.title}</h4>
@@ -133,8 +137,12 @@ function HireMePage({ currentPath, onNavigate, isLightMode, onToggleTheme }) {
               <h3>What You Get When You Work With Me</h3>
 
               <div className="hire-page__benefitGrid">
-                {workBenefits.map((item) => (
-                  <article className="hire-page__benefitCard" key={item.number}>
+                {workBenefits.map((item, index) => (
+                  <article
+                    className="hire-page__benefitCard fade-in-item hover-zoom"
+                    key={item.number}
+                    style={{ '--reveal-delay': `${index * 90}ms` }}
+                  >
                     <span className="hire-page__benefitNumber">{item.number}</span>
                     <h4>{item.title}</h4>
                     <p>{item.text}</p>

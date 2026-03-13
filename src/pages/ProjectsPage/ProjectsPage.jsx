@@ -114,8 +114,12 @@ function ProjectsPage({ currentPath, onNavigate, isLightMode, onToggleTheme }) {
             </div>
 
             <div className="projects-page__grid">
-              {filteredProjects.map((project) => (
-                <article className="projects-page__card" key={project.title}>
+              {filteredProjects.map((project, index) => (
+                <article
+                  className="projects-page__card fade-in-item hover-zoom"
+                  key={project.title}
+                  style={{ '--reveal-delay': `${index * 90}ms` }}
+                >
                   <img src={project.image} alt={project.title} className="projects-page__image" />
 
                   <div className="projects-page__content">

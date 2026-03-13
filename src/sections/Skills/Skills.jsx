@@ -139,7 +139,11 @@ function Skills() {
 
           <div className="skills__grid">
             {activeSkills.map((skill, index) => (
-              <article className="skills__card" key={skill.name}>
+              <article
+                className="skills__card fade-in-item hover-zoom"
+                key={skill.name}
+                style={{ '--reveal-delay': `${index * 75}ms` }}
+              >
                 <div className="skills__top">
                   <span className="skills__index">{String(index + 1).padStart(2, '0')}</span>
                   <h3 className="skills__name">{skill.name}</h3>
