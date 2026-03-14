@@ -35,7 +35,6 @@
   min-height: 280px;
   display: flex;
   flex-direction: column;
-  transition: transform 0.22s ease;
 }
 
 body[data-theme='light'] .services-page__card {
@@ -122,6 +121,10 @@ body[data-theme='light'] .services-page__card {
 }
 
 @media (hover: hover) and (pointer: fine) {
+  .services-page__card {
+    transition: transform 0.22s ease;
+  }
+
   .services-page__card:hover {
     transform: scale(1.03);
   }

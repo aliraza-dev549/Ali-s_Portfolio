@@ -169,7 +169,16 @@
   font-weight: 700;
   font-size: 1.28rem;
   letter-spacing: 0.01em;
-  transition: transform 0.2s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .header__hire {
+    transition: transform 0.2s ease;
+  }
+
+  .header__hire:hover {
+    transform: translateY(-2px);
+  }
 }
 
 .header__hire::after {
@@ -182,10 +191,6 @@
   border-radius: 50%;
   background: #3b82f6;
   box-shadow: 0 0 0 2px rgba(16, 19, 28, 0.3);
-}
-
-.header__hire:hover {
-  transform: translateY(-2px);
 }
 
 .header__hire--active {

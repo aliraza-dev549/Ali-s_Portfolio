@@ -76,7 +76,6 @@
   border-radius: 0.42rem;
   overflow: hidden;
   background: var(--panel);
-  transition: transform 0.22s ease;
 }
 
 .projects-page__image {
@@ -141,6 +140,10 @@
 }
 
 @media (hover: hover) and (pointer: fine) {
+  .projects-page__card {
+    transition: transform 0.22s ease;
+  }
+
   .projects-page__card:hover {
     transform: scale(1.03);
   }

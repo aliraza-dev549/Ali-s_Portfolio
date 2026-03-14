@@ -24,32 +24,13 @@
   min-height: 260px;
   padding: 1.2rem;
   position: relative;
-  transition: transform 0.22s ease;
-}
-
-.process__number {
-  position: absolute;
-  right: 1rem;
-  top: 1rem;
-  color: rgba(142, 152, 179, 0.25);
-  font-size: 2.4rem;
-  font-weight: 700;
-}
-
-.process__card h3 {
-  font-size: 1.45rem;
-  line-height: 1.25;
-  margin-top: 3rem;
-  margin-bottom: 0.7rem;
-}
-
-.process__card p {
-  color: var(--text-muted);
-  font-size: 1.05rem;
-  line-height: 1.6;
 }
 
 @media (hover: hover) and (pointer: fine) {
+  .process__card {
+    transition: transform 0.22s ease;
+  }
+
   .process__card:hover {
     transform: scale(1.03);
   }

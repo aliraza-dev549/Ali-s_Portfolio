@@ -127,7 +127,6 @@
     linear-gradient(180deg, rgba(20, 28, 41, 0.92), rgba(20, 26, 39, 0.88));
   padding: 1.15rem 1.2rem;
   min-height: 150px;
-  transition: transform 0.22s ease;
 }
 
 .experience__meta {
@@ -258,6 +257,10 @@
 }
 
 @media (hover: hover) and (pointer: fine) {
+  .experience__card {
+    transition: transform 0.22s ease;
+  }
+
   .experience__card:hover {
     transform: scale(1.03);
   }

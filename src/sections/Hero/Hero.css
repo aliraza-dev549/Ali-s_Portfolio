@@ -7,7 +7,7 @@
 }
 
 .hero__grid {
-  min-height: calc(100vh - 100px);
+  min-height: calc(var(--full-height) - 100px);
   display: grid;
   grid-template-columns: 1.12fr 0.88fr;
   align-items: center;
@@ -82,11 +82,16 @@
   font-weight: 700;
   font-size: 1.02rem;
   line-height: 1;
-  transition: transform 0.2s ease;
 }
 
-.hero__button:hover {
-  transform: translateY(-2px);
+@media (hover: hover) and (pointer: fine) {
+  .hero__button {
+    transition: transform 0.2s ease;
+  }
+
+  .hero__button:hover {
+    transform: translateY(-2px);
+  }
 }
 
 .hero__button--primary {
@@ -128,7 +133,6 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.25s ease;
 }
 
 .hero__socials a svg {
@@ -136,9 +140,15 @@
   height: 16px;
 }
 
-.hero__socials a:hover {
-  color: var(--accent);
-  transform: translateY(-2px);
+@media (hover: hover) and (pointer: fine) {
+  .hero__socials a {
+    transition: transform 0.25s ease;
+  }
+
+  .hero__socials a:hover {
+    color: var(--accent);
+    transform: translateY(-2px);
+  }
 }
 
 .hero__visual {
@@ -168,6 +178,8 @@
   mask: radial-gradient(farthest-side, transparent calc(100% - 3px), #000 calc(100% - 3px));
   pointer-events: none;
   animation: orbitSpin 16s linear infinite;
+  will-change: transform;
+  transform: translateZ(0);
 }
 
 .hero__photo {
@@ -177,6 +189,7 @@
   border-radius: 50%;
   border: 5px solid rgba(224, 229, 236, 0.88);
   animation: photoFloat 5.6s ease-in-out infinite;
+  will-change: transform;
 }
 
 .hero__scroll {
@@ -245,6 +258,9 @@ body[data-theme='light'] .hero__scrollDot {
   padding: 0.95rem 1.5rem;
   width: max-content;
   animation: tickerMove 24s linear infinite;
+  will-change: transform;
+  /* Keep on GPU compositor thread to avoid main-thread jank */
+  transform: translateZ(0);
 }
 
 .hero__tickerTrack span {
@@ -262,7 +278,7 @@ body[data-theme='light'] .hero__scrollDot {
 
 @media (max-width: 768px) {
   .hero__grid {
-    min-height: auto;
+    min-height: 0;
     grid-template-columns: 1fr;
     text-align: center;
     padding-top: 1.25rem;
@@ -316,6 +332,13 @@ body[data-theme='light'] .hero__scrollDot {
 
   .hero__orbit {
     inset: -8px;
+    /* Slow down the orbit on mobile to reduce GPU load */
+    animation-duration: 28s;
+  }
+
+  /* Disable the photo float on mobile — saves a GPU layer */
+  .hero__photo {
+    animation: none;
   }
 
   .hero__scroll {

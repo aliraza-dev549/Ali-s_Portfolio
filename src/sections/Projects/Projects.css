@@ -64,7 +64,6 @@
   border-radius: 1rem;
   overflow: hidden;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(17, 23, 38, 0.92));
-  transition: transform 0.22s ease;
 }
 
 .projects__media {
@@ -182,6 +181,10 @@ body[data-theme='light'] .projects__arrow {
 }
 
 @media (hover: hover) and (pointer: fine) {
+  .projects__card {
+    transition: transform 0.22s ease;
+  }
+
   .projects__card:hover {
     transform: scale(1.03);
   }

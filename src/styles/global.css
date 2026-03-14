@@ -58,6 +58,7 @@ body,
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -67,6 +68,19 @@ body {
   font-size: 15px;
   line-height: 1.5;
   overflow-x: hidden;
+  /* Prevent content shifting when scrollbar appears/disappears */
+  scrollbar-gutter: stable;
+}
+
+/* Use dvh on mobile so the hero doesn't jitter when browser chrome shows/hides */
+:root {
+  --full-height: 100vh;
+}
+
+@supports (height: 100dvh) {
+  :root {
+    --full-height: 100dvh;
+  }
 }
 
 button,
@@ -74,6 +88,13 @@ input,
 select,
 textarea {
   font: inherit;
+}
+
+/* Remove 300ms tap delay on touch devices */
+a,
+button,
+[role='button'] {
+  touch-action: manipulation;
 }
 
 .hero__title,
@@ -89,15 +110,13 @@ a {
   color: inherit;
 }
 
+/* Hover transitions only on true pointer devices — prevents touch jank */
 @media (hover: hover) and (pointer: fine) {
   :where(
     a,
     button,
-    [class*='__card'],
-    [class*='__item'],
     [class*='__tab'],
     [class*='__button'],
-    [class*='__social'],
     [class*='__hire'],
     [class*='__logo']
   ) {
@@ -157,6 +176,8 @@ section {
   transition: opacity 0.28s ease, transform 0.28s ease, box-shadow 0.28s ease;
   z-index: 1200;
   box-shadow: 0 10px 24px rgba(8, 13, 25, 0.45);
+  will-change: transform, opacity;
+  touch-action: manipulation;
 }
 
 .scrollTop svg {
@@ -164,6 +185,18 @@ section {
   height: 21px;
   fill: currentColor;
   animation: arrowFloat 1.7s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Respect user preference — stops all decorative animations */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 .scrollTop--show {
