@@ -3,36 +3,36 @@ import './Skills.css'
 
 const skillsData = {
   programming: [
-    { name: 'JavaScript', percent: 95, type: 'Language' },
-    { name: 'TypeScript', percent: 90, type: 'Language' },
-    { name: 'C#', percent: 88, type: 'Language' },
-    { name: 'Python', percent: 80, type: 'Language' },
-    { name: 'Java', percent: 75, type: 'Language' },
-    { name: 'C++', percent: 70, type: 'Language' },
+    { name: 'JavaScript', percent: 95, type: 'Language', icon: 'JS' },
+    { name: 'TypeScript', percent: 90, type: 'Language', icon: 'TS' },
+    { name: 'C#', percent: 88, type: 'Language', icon: 'C#' },
+    { name: 'Python', percent: 80, type: 'Language', icon: '🐍' },
+    { name: 'Java', percent: 75, type: 'Language', icon: '☕' },
+    { name: 'C++', percent: 70, type: 'Language', icon: 'C+' },
   ],
   frontend: [
-    { name: 'React', percent: 95, type: 'Framework' },
-    { name: 'Next.js', percent: 92, type: 'Framework' },
-    { name: 'Blazor WebAssembly', percent: 88, type: 'Framework' },
-    { name: 'React Native', percent: 90, type: 'Framework' },
-    { name: 'Tailwind CSS', percent: 93, type: 'Framework' },
-    { name: 'Redux Toolkit', percent: 87, type: 'State Management' },
+    { name: 'React', percent: 95, type: 'Framework', icon: '⚛' },
+    { name: 'Next.js', percent: 92, type: 'Framework', icon: 'N' },
+    { name: 'Blazor WebAssembly', percent: 88, type: 'Framework', icon: 'Bz' },
+    { name: 'React Native', percent: 90, type: 'Framework', icon: 'RN' },
+    { name: 'Tailwind CSS', percent: 93, type: 'Framework', icon: 'TW' },
+    { name: 'Redux Toolkit', percent: 87, type: 'State Management', icon: 'Rx' },
   ],
   backend: [
-    { name: 'Node.js', percent: 90, type: 'Runtime' },
-    { name: '.NET Core', percent: 88, type: 'Framework' },
-    { name: 'Express.js', percent: 90, type: 'Framework' },
-    { name: 'MongoDB', percent: 85, type: 'Database' },
-    { name: 'PostgreSQL', percent: 82, type: 'Database' },
-    { name: 'SQL Server', percent: 85, type: 'Database' },
+    { name: 'Node.js', percent: 90, type: 'Runtime', icon: '⬢' },
+    { name: '.NET Core', percent: 88, type: 'Framework', icon: '.N' },
+    { name: 'Express.js', percent: 90, type: 'Framework', icon: 'EX' },
+    { name: 'MongoDB', percent: 85, type: 'Database', icon: '🍃' },
+    { name: 'PostgreSQL', percent: 82, type: 'Database', icon: '🐘' },
+    { name: 'SQL Server', percent: 85, type: 'Database', icon: 'SQL' },
   ],
   tools: [
-    { name: 'Git & GitHub', percent: 92, type: 'Version Control' },
-    { name: 'Docker', percent: 78, type: 'Containerization' },
-    { name: 'Visual Studio', percent: 88, type: 'IDE' },
-    { name: 'VS Code', percent: 95, type: 'Editor' },
-    { name: 'Postman', percent: 90, type: 'API Tool' },
-    { name: 'Firebase', percent: 85, type: 'BaaS' },
+    { name: 'Git & GitHub', percent: 92, type: 'Version Control', icon: '⎇' },
+    { name: 'Docker', percent: 78, type: 'Containerization', icon: '🐳' },
+    { name: 'Visual Studio', percent: 88, type: 'IDE', icon: '🧩' },
+    { name: 'VS Code', percent: 95, type: 'Editor', icon: '▣' },
+    { name: 'Postman', percent: 90, type: 'API Tool', icon: '✈' },
+    { name: 'Firebase', percent: 85, type: 'BaaS', icon: '🔥' },
   ],
 }
 
@@ -75,10 +75,6 @@ function Skills() {
     () => tabItems.find((item) => item.id === activeTab),
     [activeTab],
   )
-  const averageScore = useMemo(() => {
-    const total = activeSkills.reduce((sum, skill) => sum + skill.percent, 0)
-    return Math.round(total / activeSkills.length)
-  }, [activeSkills])
 
   const scrollToContact = (event) => {
     event.preventDefault()
@@ -128,29 +124,20 @@ function Skills() {
                 <strong>{activeSkills.length}</strong>
                 <span>Key Skills</span>
               </article>
-              <article>
-                <strong>{averageScore}%</strong>
-                <span>Avg. Proficiency</span>
-              </article>
             </div>
           </div>
 
           <p className="skills__categoryBadge">{activeTabMeta.badge}</p>
 
           <div className="skills__grid">
-            {activeSkills.map((skill, index) => (
-              <article className="skills__card" key={skill.name}>
+            {activeSkills.map((skill) => (
+              <article className="skills__card skills__card--tools" key={skill.name}>
                 <div className="skills__top">
-                  <span className="skills__index">{String(index + 1).padStart(2, '0')}</span>
+                  <span className="skills__toolIcon" aria-hidden="true">{skill.icon}</span>
                   <h3 className="skills__name">{skill.name}</h3>
-                  <span className="skills__percent">{skill.percent}%</span>
                 </div>
 
-                <div className="skills__progress" aria-hidden="true">
-                  <span style={{ width: `${skill.percent}%` }}></span>
-                </div>
-
-                <p className="skills__text">{skill.type}</p>
+                <p className="skills__text skills__text--tools">{skill.type}</p>
               </article>
             ))}
           </div>

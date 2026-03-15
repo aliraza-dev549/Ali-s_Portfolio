@@ -7,6 +7,7 @@
 }
 
 :root {
+  --header-height: 82px;
   --accent: #3b82f6;
   --text-main: #f7f8fb;
   --text-dim: #abb0be;
@@ -68,6 +69,7 @@ body {
   font-size: 15px;
   line-height: 1.5;
   overflow-x: hidden;
+  padding-top: var(--header-height);
   /* Prevent content shifting when scrollbar appears/disappears */
   scrollbar-gutter: stable;
 }
@@ -228,6 +230,10 @@ body[data-theme='light'] .scrollTop {
 }
 
 @media (max-width: 760px) {
+  :root {
+    --header-height: 74px;
+  }
+
   body {
     font-size: 14px;
   }

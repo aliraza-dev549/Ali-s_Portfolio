@@ -208,6 +208,20 @@
   justify-content: center;
 }
 
+.skills__toolIcon {
+  width: 28px;
+  height: 28px;
+  border-radius: 0.5rem;
+  border: 1px solid var(--skills-soft);
+  background: var(--skills-soft);
+  color: var(--skills-accent);
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
 .skills__name {
   color: var(--text-main);
   font-size: clamp(1.03rem, 1.5vw, 1.2rem);
@@ -242,6 +256,23 @@
   color: var(--text-muted);
   font-size: 0.86rem;
   letter-spacing: 0.01em;
+}
+
+.skills__card--tools {
+  min-height: 132px;
+}
+
+.skills__text--tools {
+  margin-top: 0.95rem;
+  width: fit-content;
+  border: 1px solid var(--skills-soft);
+  border-radius: 999px;
+  padding: 0.34rem 0.62rem;
+  background: var(--skills-soft);
+  color: var(--text-main);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
 }
 
 .skills__contact {
