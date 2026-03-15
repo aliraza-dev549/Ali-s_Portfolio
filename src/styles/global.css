@@ -100,11 +100,7 @@ button,
 }
 
 .hero__title,
-.about-page__title,
-.projects-page__title,
-.services-page__title,
-.contact-page__title,
-.hire-page__title {
+.contact-page__title {
   font-family: 'Space Grotesk', Segoe UI, Arial, sans-serif;
 }
 

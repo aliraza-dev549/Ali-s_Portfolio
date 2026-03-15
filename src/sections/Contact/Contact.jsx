@@ -1,5 +1,5 @@
 import profileImage from '../../assets/home.png'
-import '../../pages/ContactPage/ContactPage.css'
+import './Contact.css'
 
 function Contact() {
   return (
